@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+  <body>
+    <form novalidate>
+      <div class="mail">
+        <label for="email" class="underline">E-mail* :</label>
+        <input type="email" id="email" name="email" required placeholder="example@example.com">
+      </div>
+      <div class="localisation">
+        <div class="country">
+          <label for="pays" class="underline">Country* :</label>
+          <input type="text" id="pays" name="pays" required placeholder="France">
+        </div>
+        <div class="zip">
+          <label for="postalCode" class="underline">ZIP code* :</label>
+          <input type="text" id="postalCode" name="code_postal" required pattern="\d{5}" placeholder="75001">
+        </div>
+      </div>
+      <div class="password">
+        <label for="mdp" class="underline">Password* :</label>
+        <input type="password" id="mdp" name="motDePasse" required minlength="10">
+        <div id="commentaire">
+          <div>votre mot de passe doit contenir au minimun :</div>
+          <ul>
+            <li>10 charactères</li>
+            <li>une majuscule</li>
+            <li>une minuscule</li>
+            <li>un chiffre</li>
+            <li>un charactère spécial</li>
+          </ul>
+        </div>
+      </div>
+      <div class="confirmationPassword">
+        <label for="mdpConfirm" class="underline">Confirm your password* :</label>
+        <input type="password" id="mdpConfirm" name="confirmation_motDePasse" required>
+      </div>
+      <button type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-up</title><path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" /></svg>
+      </button>
+    </form>
+  </body>
+</html>
